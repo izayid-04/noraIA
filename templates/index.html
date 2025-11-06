@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nora 🧠 - Chat AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>À propos</h3>
+            <button class="close-btn" onclick="toggleSidebar()">×</button>
+        </div>
+
+        <div class="sidebar-section">
+            <h4>Créé par</h4>
+            <p style="color: var(--text-secondary); line-height: 1.6;">
+                <strong style="color: var(--pink-primary);">Izayid Ali</strong><br>
+                Développeur passionné par l'IA et le deep learning
+            </p>
+        </div>
+
+        <div class="sidebar-section">
+            <h4>Liens</h4>
+            <div class="social-links" id="socialLinks">
+                <!-- Les liens seront ajoutés dynamiquement -->
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <p style="color: var(--text-secondary); font-size: 13px; line-height: 1.6;">
+                Nora est une intelligence artificielle conçue pour vous aider et répondre à vos questions de manière naturelle et intuitive.
+            </p>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo-section">
+                <div class="logo">
+                    <svg viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" fill="var(--dark-card)" stroke="var(--pink-primary)" stroke-width="2"/>
+                        <path class="logo-brain-path" d="M30 50 Q50 20 70 50 Q50 80 30 50" fill="var(--pink-primary)" opacity="0.8"/>
+                        <circle cx="50" cy="50" r="15" fill="var(--pink-primary)"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>Nora</h1>
+                </div>
+            </div>
+            <button class="menu-btn" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <!-- Welcome Screen -->
+                <div class="welcome-screen" id="welcomeScreen">
+                    <div class="welcome-logo">
+                        <svg viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" fill="var(--dark-bg)" stroke="var(--pink-primary)" stroke-width="2"/>
+                            <path class="logo-brain-path" d="M30 50 Q50 20 70 50 Q50 80 30 50" fill="var(--pink-primary)" opacity="0.8"/>
+                            <circle cx="50" cy="50" r="15" fill="var(--pink-primary)"/>
+                        </svg>
+                    </div>
+                    <h2>Bonjour ! Je suis Nora</h2>
+                    <p>Votre assistante IA intelligente. Posez-moi n'importe quelle question et je ferai de mon mieux pour vous aider.</p>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="messageInput" 
+                        placeholder="Posez votre question..."
+                        autocomplete="off"
+                    >
+                </div>
+                <button id="sendBtn" onclick="sendMessage()">
+                    <span>Envoyer</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            Créé avec ❤️ par <a href="#" onclick="toggleSidebar(); return false;">Izayid Ali</a>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
