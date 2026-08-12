@@ -2,14 +2,8 @@
 
 **Nora** est une assistante IA conversationnelle avec une interface de chat moderne, sombre et animée. Le projet est né d'un exposé étudiant sur les algorithmes et modèles de deep learning, avec l'ambition de transformer la théorie du cours en démo concrète et utilisable.
 
-<!--
-  📸 Capture d'écran — à ajouter ici une fois disponible.
-  Suggestion : une capture de l'écran d'accueil avec le message de
-  bienvenue, et une d'une conversation en cours avec Nora.
-
-  ![Écran d'accueil de Nora](docs/screenshots/welcome.png)
-  ![Conversation avec Nora](docs/screenshots/chat.png)
--->
+![Écran d'accueil de Nora](docs/screenshots/welcome.png)
+![Conversation avec Nora](docs/screenshots/chat.png)
 
 ## Pourquoi ce projet ?
 
