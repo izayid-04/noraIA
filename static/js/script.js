@@ -1,9 +1,9 @@
-        // Configuration - Ces variables seront remplacées par les valeurs du fichier .env
-        const CONFIG = {
-            portfolio: '{{PORTFOLIO_URL}}',
-            github: '{{GITHUB_URL}}',
-            linkedin: '{{LINKEDIN_URL}}',
-            twitter: '{{TWITTER_URL}}'
+        // Configuration - injectée par templates/index.html depuis les variables du .env
+        const CONFIG = window.NORA_CONFIG || {
+            portfolio: '#',
+            github: '#',
+            linkedin: '#',
+            twitter: '#'
         };
 
         // Initialize social links

@@ -109,6 +109,14 @@
         </div>
     </div>
 
+    <script>
+        window.NORA_CONFIG = {
+            portfolio: {{ PORTFOLIO_URL | tojson }},
+            github: {{ GITHUB_URL | tojson }},
+            linkedin: {{ LINKEDIN_URL | tojson }},
+            twitter: {{ TWITTER_URL | tojson }}
+        };
+    </script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </body>
